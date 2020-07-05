@@ -10484,12 +10484,12 @@ p.lead {
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
-    padding: 0.5rem;
+    padding: 0;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 13rem;
-    max-height: 13rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 100%;
+    height: auto;
+    border: 0;
   }
   #sideNav .navbar-collapse {
     display: flex;
