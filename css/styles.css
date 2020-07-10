@@ -4482,6 +4482,7 @@ input[type="button"].btn-block {
   }
   .navbar-nav {
     padding-left: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 }
 @media (min-width: 992px) {
