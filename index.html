@@ -11,10 +11,8 @@
     <title>CV d'en Jordi Taulats</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Google fonts-->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
@@ -30,6 +28,26 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body id="page-top">
+  <script>
+      window.onload = function () {
+
+   var ln = navigator.language || navigator.userLanguage;
+   /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
+   let pagActual = window.location.pathname;
+   
+   
+   if (ln == 'en-EN' && !pagActual.includes("indexEn")) {
+       window.location.href = 'index_eng.html';  
+   } else if (ln == 'es-ES' && !pagActual.includes("indexEs")) {
+       window.location.href = 'index_es.html';
+   } else if (ln == 'de-DE' && !pagActual.includes("indexDe")){
+       window.location.href = 'indexDe.html';
+   } else{
+     console.log("Otro idioma");
+   }
+
+}
+  </script>
     <!-- Navigation-->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
@@ -72,10 +90,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#treballs">Treballs</a>
           </li>
-          <p></p>
-          <li class="nav-item">
-            <a href="assets/img/CV.pdf" style="color: ivory; text-decoration: none;"><button type="button" class="btn btn-dark">Descarrega el CV</button></a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -103,14 +117,18 @@
               class="social-icon"
               href="https://www.linkedin.com/in/jordi-taulats-1b768850/"
               target="_blanck"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+              ><i class="fa-brands fa-linkedin-in"></i>
+            </a>
             <a
               class="social-icon"
               href="https://www.facebook.com/jordi.taulats/"
               target="_blanck"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+              ><i class="fa-brands fa-facebook-f"></i></a>
+			<a
+              class="social-icon"
+              href="https://www.instagram.com/jordi_t_o/"
+              target="_blanck"
+              ><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </section>
@@ -119,12 +137,10 @@
       <section class="resume-section" id="experiencia">
         <div class="resume-section-content">
           <h2 class="mb-5">Experiència laboral</h2>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
               <h3 class="mb-0">Disseny i maquetació</h3>
-              <div class="subheading mb-3">Hermes Comunicacions</div>
+              <div class="subheading mb-3"><a href="http://www.elpuntavui.cat" target="blanck">Hermes Comunicacions</a></div>
               <p>
                 Després d'estar treballant poc temps en una empresa d'informàtica, fent atenció a l'usuari i muntant ordinadors i TPV (terminals punt de venda), quan aquesta va tancar vaig entrar <b>Hermes Comunicacions</b>, editora del diari <b>El Punt Avui</b>. Els primers nou mesos els vaig passar a la secció de producció, fent anuncis amb Illustrator i Photoshop. Després em van passar a la secció de maquetació, on encara treballo avui dia.<br /><br />
                 La meva tasca consisteix en la maquetació del dia a dia de les capceleres <b>El Punt Avui</b> i <b>L'Esportiu de Catalunya</b>,
@@ -136,11 +152,24 @@
               <span class="text-primary">Juliol del 1999 - Present</span>
             </div>
           </div>
+		  
+		   <hr style="margin-bottom: 3rem;" />
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">UI/UX Designer</h3>
+              <div class="subheading mb-3"><a href="https://www.amazcat.cat" target="_blanck">Amazcat</a></div>
+              <p>
+              Un grup d'emprenedors em contacta per saber si vull formar part d'Amazcat, una plataforma de comerç de proximitat. </br></br>
+			  La meva feina allà consisteix a proporcionar, als diferents grups de treball, els dissenys i elements necessaris per tirar endavant la plataforma.  
+              </p>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">Setembre del 2020 - Desembre del 2021</span>
+            </div>
+        </div>
 
           <hr style="margin-bottom: 3rem;" />
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
               <h3 class="mb-0">Web Developer</h3>
               <div class="subheading mb-3">HP Girona</div>
@@ -197,6 +226,7 @@
             <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
             <li class="list-inline-item"><i class="fab fa-adobe"></i></li>
             <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+			 <li class="list-inline-item"><i class="fa-brands fa-figma"></i></li>
           </ul>
 
           <ul class="fa-ul mb-0">
@@ -211,6 +241,10 @@
             <li>
               <span class="fa-li"><i class="fas fa-check"></i></span>
               Indesign
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-check"></i></span>
+              Figma
             </li>
           </ul>
           <div class="subheading mb-3 mt-5">Workflow</div>
@@ -252,32 +286,38 @@
         <div class="resume-section-content">
           <h2 class="mb-5">Treballs</h2>
           <div class="row">
-            <div class="row">
-              <div class="col-12"><h3>Amazcat <span class="subheading mb-3"><a href="https://www.amazcat.cat" target="_blanc">(www.amazcat.cat)</a></span></h3></div>
-              <div class="col-sm-12 col-md-8 pt-6">
-                <a href="https://www.amazcat.cat" target="_blanc"><img src="assets/img/amazcat.jpg" alt="Amazcat. El teu comerç de proximitat" class="img-thumbnail"></a>
-              </div>
-           </div>
               <div class="col-12"><h3>Els Bastards <span class="subheading mb-3"><a href="https://www.elsbastards.cat" target="_blanc">(www.elsbastards.cat)</a></span></h3></div>
-              <div class="col-sm-12 col-md-8 pt-6">
+              <div class="col-sm-12 col-md-6 pt-6">
                 <a href="https://www.elsbastards.cat" target="_blanc"><img src="assets/img/bastards01.jpg" alt="Blog d'Els Bastards" class="img-thumbnail"></a>
               </div>
-           </div>
+              <div class="col-sm-12 col-md-6 pt-6">
+                <a href="https://www.elsbastards.cat" target="_blanc"><img src="assets/img/bastards02.jpg" alt="Blog d'Els Bastards" class="img-thumbnail"></a>
+              </div>
+          </div>
           <div class="row pt-5">
             <div class="col-12"><h3>L’impuls espai de salut <span class="subheading mb-3"><a href="https://www.impuls.cat" target="_blanc">(www.impuls.cat)</a></span></h3></div>
-            <div class="col-sm-12 col-md-8 pt-6">
+            <div class="col-sm-12 col-md-6 pt-6">
               <a href="https://www.impuls.cat" target="_blanc"><img src="assets/img/impuls01.jpg" alt="Web de L'Impuls, espai de salut" class="img-thumbnail"></a>
             </div>
         </div>
         <div class="row pt-5">
           <div class="col-12"><h3>Ca la Flora Bed&Breakfast <span class="subheading mb-3"><a href="http://calaflora.com/" target="_blanc">(www.calaflora.com)</a></span></h3></div>
-          <div class="col-sm-12 col-md-8 pt-6">
+          <div class="col-sm-12 col-md-6 pt-6">
             <a href="http://calaflora.com/" target="_blanc"><img src="assets/img/calaflora01.jpg" alt="Web de Ca la Flora Bed&Breakfast" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-12 col-md-6 pt-6">
+            <a href="http://calaflora.com/" target="_blanc"><img src="assets/img/calaflora02.jpg" alt="Web de Ca la Flora Bed&Breakfast" class="img-thumbnail"></a>
           </div>
           <div class="row pt-5">
             <div class="col-12"><h3>Secció de jocs de l'Editorial Nanit <span class="subheading mb-3"><a href="https://www.nanit.cat/" target="_blanc">(www.nanit.cat)</a></span></h3></div>
-          <div class="col-sm-12 col-md-8 pt-6">
+          <div class="col-sm-12 col-md-4 pt-6">
             <a href="https://www.nanit.cat/pages/puzles" target="_blanc"><img src="assets/img/nanit01.jpg" alt="Puzles de l'editorial Nanit" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-12 col-md-4 pt-6">
+            <a href="https://www.nanit.cat/pages/puzles" target="_blanc"><img src="assets/img/nanit02.jpg" alt="Puzles de l'editorial Nanit" class="img-thumbnail"></a>
+          </div>
+          <div class="col-sm-12 col-md-4 pt-6">
+            <a href="https://www.nanit.cat/pages/pinta-pinta" target="_blanc"><img src="assets/img/nanit03.jpg" alt="Pinta de l'editorial Nanit" class="img-thumbnail"></a>
           </div>
       </div>
             
