@@ -28,24 +28,19 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body id="page-top">
-  <script>
-      window.onload = function () {
-
-   var ln = navigator.language || navigator.userLanguage;
-   /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
-   let pagActual = window.location.pathname;
-   
-   
-   if (ln == 'en-EN' && !pagActual.includes("indexEn")) {
-       window.location.href = 'index_eng.html';  
-   } else if (ln == 'es-ES' && !pagActual.includes("indexEs")) {
-       window.location.href = 'index_esp.html';
-   } else{
-     console.log("Otro idioma");
-   }
-
+<script type="text/javascript">
+window.onload = function() {
+ 
+var ln = x=window.navigator.language||navigator.browserLanguage;
+if(ln == 'en'){
+window.location.href = 'index_eng.html';//angles
+}else if(ln == 'es'){
+window.location.href = 'index_esp.html'; // catella
+}else{
+window.location.href = 'index_eng.html'; // si no es cap, a angles
 }
-  </script>
+}
+</script>
     <!-- Navigation-->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
