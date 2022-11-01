@@ -32,14 +32,14 @@
 window.onload = function() {
  
 var ln = x=window.navigator.language||navigator.browserLanguage;
-if(ln == 'en'){
-window.location.href = 'index_eng.html';//angles
-}else if(ln == 'ca'){
-window.location.href = 'index.html'; // catala
+if(ln == 'ca'){
+window.location.href = 'index.html'; //catala
+}else if(ln == 'en'){
+window.location.href = 'index_eng.html'; // angles
 }else if(ln == 'es'){
-window.location.href = 'index_esp.html'; // catella
+window.location.href = 'index_esp.html'; // castella
 }else{
-window.location.href = 'index_eng.html'; // si no es cap, a angles
+window.location.href = 'index.html'; // si no es cap, a catala
 }
 }
 </script>
