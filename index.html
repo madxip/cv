@@ -29,23 +29,18 @@
   </head>
   <body id="page-top">
 <script type="text/javascript">
-    window.onload = function () {
-
-   var ln = navigator.language || navigator.userLanguage;
-   /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
-   let pagActual = window.location.pathname;
-   
-   
-   if (ln == 'en-EN' && !pagActual.includes("indexEn")) {
-       window.location.href = 'index_eng.html';  
-   } else if (ln == 'es-ES' && !pagActual.includes("indexEs")) {
-       window.location.href = 'index_esp.html';
-   } else if (ln == 'ca-CA' && !pagActual.includes("indexCa")){
-       window.location.href = 'index.html';
-   } else{
-     console.log("Otro idioma");
-   }
-
+window.onload = function() {
+ 
+var ln = x=window.navigator.language||navigator.browserLanguage;
+if(ln == 'ca'){
+window.location.href = 'index.html';
+}else if(ln == 'en'){
+window.location.href = 'index_eng.html';
+}else if(ln == 'es'){
+window.location.href = 'index_esp.html';
+}else{
+window.location.href = 'index_eng.html'; // si no cap de les altres
+}
 }
 </script>
     <!-- Navigation-->
